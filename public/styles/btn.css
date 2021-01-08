@@ -1,0 +1,28 @@
+button:active,
+button:focus,
+button:hover {
+	outline: none !important;
+	text-decoration: none !important;
+}
+
+a {
+	color: #F8F8FF;
+	font-size: 1.9rem;
+	text-decoration: none !important;
+}
+
+a:hover {
+	color: #F8F8FF;
+}
+
+.spBtn {
+	font-family: 'Metal Mania', cursive;
+	color: #F8F8FF;
+	background: transparent;
+	border: none;
+	text-decoration: none;
+}
+
+.spBtn:hover {
+	color: #F8F8FF;
+}

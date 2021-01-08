@@ -1,0 +1,19 @@
+.xsText {
+	font-size: 1.1rem;
+}
+
+.smText {
+	font-size: 1.7rem;
+}
+
+.mdText {
+	font-size: 2.4rem;
+}
+
+.lgText {
+	font-size: 3.7rem;
+}
+
+.contentFont {
+	font-family: 'Pirata One', cursive;
+}
