@@ -1,2 +1,2 @@
-.env
-/node_modules
+/v1.x.x/.env
+/v1.x.x/node_modules
