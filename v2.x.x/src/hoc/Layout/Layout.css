@@ -1,0 +1,51 @@
+.Content {
+	margin-top: 72px;
+}
+
+.PageContainer {
+	position: relative;
+	min-height: 100vh;
+}
+
+.ContentWrap {
+	padding-bottom: 6rem;
+}
+
+.Footer {
+	text-align: center;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 2.5rem;
+	line-height: 37px;
+}
+
+.Copyright {
+	line-height: 58px;
+	padding-bottom: 12px;
+}
+
+.TrevMorin {
+	font-size: 2.2rem;
+	font-family: 'Lacquer', cursive;
+}
+
+.TrevMorin,
+.French {
+	color: #E5E9FF;
+	text-decoration: none;
+	border: transparent;
+	border-radius: 6px;
+	padding: 7px;
+	margin: 10px;
+	transition: all 0.4s;
+	-webkit-transition: all 0.4s;
+	-moz-transition: all 0.4s;
+}
+
+.TrevMorin:hover,
+.French:hover {
+	box-shadow: inset 0 0 10px #5F5F6B,
+				0 0 10px #44444C;
+	background-color: #44444C;
+}

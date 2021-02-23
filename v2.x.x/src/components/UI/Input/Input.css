@@ -1,0 +1,86 @@
+.Input {
+	width: 100%;
+	padding: 10px;
+	box-sizing: border-box;
+}
+
+.Label {
+	display: block;
+	margin-bottom: 8px;
+}
+
+.InputElement {
+	outline: none;
+	border: none;
+	box-shadow: inset 0 0 10px #565661,
+				0 0 10px #E5E9FF;
+	background-color: #E5E9FF;
+	font: inherit;
+	padding: 6px 10px;
+	display: block;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+.InputElement:focus {
+	outline: none;
+}
+
+.Invalid {
+	color: #E5E9FF;
+	background-color: #800000;
+	box-shadow: inset 0 0 10px #565661,
+				0 0 10px #800000;
+}
+
+.Invalid::-webkit-input-placeholder {
+	color: #E5E9FF;
+}
+
+.Invalid:-moz-placeholder {
+	color: #E5E9FF;
+	opacity: 1;
+}
+
+.Invalid::-moz-placeholder {
+	color: #E5E9FF;
+	opacity: 1;
+}
+
+.Invalid:-ms-input-placeholder {
+	color: #E5E9FF;
+}
+
+.Invalid::-ms-input-placeholder {
+	color: #E5E9FF;
+}
+
+.Invalid::placeholder {
+	color: #E5E9FF;
+}
+
+::-webkit-input-placeholder {
+	color: #858593;
+}
+
+:-moz-placeholder {
+	color: #858593;
+	opacity: 1;
+}
+
+::-moz-placeholder {
+	color: #858593;
+	opacity: 1;
+}
+
+:-ms-input-placeholder {
+	color: #858593;
+}
+
+::-ms-input-placeholder {
+	color: #858593;
+}
+
+::placeholder {
+	color: #858593;
+}

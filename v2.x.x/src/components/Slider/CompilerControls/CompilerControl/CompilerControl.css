@@ -1,0 +1,65 @@
+.CompilerControl {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5px 0;
+}
+
+.CompilerControl Button {
+    display: block;
+    font: inherit;
+    padding: 5px;
+    margin: 0 5px;
+    width: 80px;
+	border-radius: 6px;
+    cursor: pointer;
+    outline: none;
+	transition: all 0.1s;
+	-webkit-transition: all 0.1s;
+	-moz-transition: all 0.1s;
+}
+
+.CompilerControl button:disabled {
+	background-color: #4D4D57;
+	border: 1px solid #696976;
+	border-radius: 6px;
+	color: #727280;
+	cursor: default;
+}
+
+.CompilerControl button:hover:disabled {
+	background-color: #4D4D57;
+	color: #727280;
+	cursor: not-allowed;
+}
+
+.Label {
+	padding: 10px;
+	font-size: 1.9rem;
+	width: 80px;
+	margin-right: 18px;
+}
+
+.CompilerControl .Less {  
+	background-color: #3A3A42;
+	border: 1px solid #3A3A42;
+	color: #E5E9FF;
+}
+
+.CompilerControl .More {
+	background-color: #1F1F23;
+	border: 1px solid #1F1F23;
+	color: #E5E9FF;
+}
+
+.CompilerControl .Less:hover,
+.CompilerControl .Less:active {  
+	background-color: #44444C;
+	color: #E5E9FF;
+}
+
+.CompilerControl .More:hover,
+.CompilerControl .More:active {
+	background-color: #313137;
+	color: #E5E9FF;
+}

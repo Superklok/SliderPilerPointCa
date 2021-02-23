@@ -1,2 +1,26 @@
-/v1.x.x/.env
+# version 1.x.x
+# dépendances
 /v1.x.x/node_modules
+
+# misc
+/v1.x.x/.env
+
+# version 2.x.x
+# dépendances
+/v2.x.x/node_modules
+
+# test
+/v2.x.x/coverage
+
+# production
+/v2.x.x/build
+
+# misc
+/v2.x.x/.DS_Store
+/v2.x.x/.env.local
+/v2.x.x/.env.development.local
+/v2.x.x/.env.test.local
+/v2.x.x/.env.production.local
+/v2.x.x/npm-debug.log*
+/v2.x.x/yarn-debug.log*
+/v2.x.x/yarn-error.log*

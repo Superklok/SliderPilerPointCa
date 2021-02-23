@@ -1,0 +1,10 @@
+h1 {
+	font-weight: 400;
+	font-size: 3rem;
+}
+
+.CheckoutSummary {
+	text-align: center;
+	width: 80%;
+	margin: auto;
+}
