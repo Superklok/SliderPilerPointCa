@@ -1,6 +1,6 @@
 {
   "name": "sliderpilerpointca",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Slider Piler (Français)",
   "main": "app.js",
   "scripts": {
@@ -11,12 +11,12 @@
     "type": "git",
     "url": "https://github.com/Superklok/SliderPilerPointCa.git"
   },
-  "author": "Trev Morin <trev@superklok.com> (https://trevmorin.ca)",
+  "author": "Trev Morin <trev@superklok.ca> (http://trevmorin.ca)",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Superklok/SliderPilerPointCa/issues"
   },
-  "homepage": "https://sliderpiler.ca",
+  "homepage": "http://sliderpiler.ca",
   "dependencies": {
     "dotenv": "^8.2.0",
     "ejs": "^3.1.5",
