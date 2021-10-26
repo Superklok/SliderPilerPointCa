@@ -13,3 +13,8 @@ body {
 .spBG {
 	background-color: #5F5F6B;
 }
+
+.socialBtn {
+	text-decoration: none;
+	padding: 7px;
+}
