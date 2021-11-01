@@ -6,22 +6,44 @@ button:hover {
 }
 
 a {
-	color: #E5E9FF;
 	font-size: 1.9rem;
-	text-decoration: none !important;
 }
 
-a:hover {
+.spBtnEmail {
 	color: #E5E9FF;
-}
-
-.spBtn {
-	color: #E5E9FF;
-	background: transparent;
-	border: none;
+	background-color: #565661;
 	text-decoration: none;
+	border: transparent;
+	border-radius: 6px;
+	margin-left: 1px;
+	padding: 0px 8px 0px 7px;
+	transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
 }
 
-.spBtn:hover {
+.spBtnEmail:hover {
 	color: #E5E9FF;
+	box-shadow: inset 0 0 10px #565661,
+				0 0 10px #3A3A41;
+	background-color: #3A3A41;
+}
+
+.spBtnFooter {
+	color: #E5E9FF;
+	background-color: #5F5F6B;
+	text-decoration: none;
+	border: transparent;
+	border-radius: 6px;
+	padding: 0px 7px;
+	transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+}
+
+.spBtnFooter:hover {
+	color: #E5E9FF;
+	box-shadow: inset 0 0 10px #5F5F6B,
+				0 0 10px #43434C;
+	background-color: #43434C;
 }

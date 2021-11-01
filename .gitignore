@@ -3,7 +3,6 @@
 /v1.x.x/node_modules
 
 # misc
-/v1.x.x/assets
 /v1.x.x/.env
 
 # version 2.x.x
