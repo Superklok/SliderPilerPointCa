@@ -1,4 +1,4 @@
-# Slider Piler (Version française) v2.1.1
+# Slider Piler (Version française) v2.1.2
 <br />
 
 ## Basic Root User Deployment Guide For App Evaluation

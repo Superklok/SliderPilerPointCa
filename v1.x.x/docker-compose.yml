@@ -2,7 +2,7 @@ version: "2.4"
 
 services:
   app:
-    image: sliderpilerpointca:1.5.2
+    image: sliderpilerpointca:1.5.3
     build: 
       context: .
     ports:
