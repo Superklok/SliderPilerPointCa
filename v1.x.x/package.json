@@ -1,6 +1,6 @@
 {
   "name": "sliderpilerpointca",
-  "version": "1.5.3",
+  "version": "1.5.4",
   "description": "Slider Piler (Français)",
   "main": "app.js",
   "scripts": {
@@ -18,7 +18,7 @@
   },
   "homepage": "http://sliderpiler.ca",
   "dependencies": {
-    "ejs": "^3.1.5",
+    "ejs": "^3.1.6",
     "ejs-mate": "^3.0.0",
     "express": "^4.17.1"
   },
