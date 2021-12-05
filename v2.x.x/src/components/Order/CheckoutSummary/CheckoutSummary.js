@@ -1,5 +1,4 @@
 import React from 'react';
-
 import Slider from '../../Slider/Slider';
 import Button from '../../UI/Button/Button';
 import classes from './CheckoutSummary.css';
@@ -12,10 +11,10 @@ const checkoutSummary = (props) => {
 				<Slider ingredients={props.ingredients} />
 			</div>
 			<Button 
-				btnType="Danger"
+				btnType='Danger'
 				clicked={props.checkoutCancelled}>Annuler</Button>
 			<Button 
-				btnType="Success"
+				btnType='Success'
 				clicked={props.checkoutContinued}>Continuer</Button>
 		</div>
 	);

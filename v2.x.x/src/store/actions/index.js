@@ -5,6 +5,7 @@ export {
 	setIngredients,
 	fetchIngredientsFailed
 } from './sliderCompiler';
+
 export { 
 	purchaseSlider,
 	purchaseInit,
@@ -16,6 +17,7 @@ export {
 	fetchOrdersStart,
 	fetchOrdersFail
 } from './order';
+
 export {
 	auth,
 	logout,

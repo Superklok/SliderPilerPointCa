@@ -1,5 +1,4 @@
-import React, { Component } from 'react';
-
+import React, {Component} from 'react';
 import classes from './OrderSummary.css';
 import Aux from '../../../hoc/Auxiliary/Auxiliary';
 import Button from '../../UI/Button/Button';
@@ -27,8 +26,8 @@ class OrderSummary extends Component {
 					<span className={classes.Price}> {this.props.price.toFixed(2)}</span>
 				</p>
 				<p>Proc&eacute;der au paiement?</p>
-				<Button btnType="Danger" clicked={this.props.purchaseCancelled}>Annuler</Button>
-				<Button btnType="Success" clicked={this.props.purchaseContinued}>Continuer</Button>
+				<Button btnType='Danger' clicked={this.props.purchaseCancelled}>Annuler</Button>
+				<Button btnType='Success' clicked={this.props.purchaseContinued}>Continuer</Button>
 			</Aux>
 		);
 	}

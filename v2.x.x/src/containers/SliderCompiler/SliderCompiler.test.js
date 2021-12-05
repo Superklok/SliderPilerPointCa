@@ -1,9 +1,7 @@
 import React from 'react';
-
-import { configure, shallow } from 'enzyme';
+import {configure, shallow} from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
-
-import { SliderCompiler } from './SliderCompiler';
+import {SliderCompiler} from './SliderCompiler';
 import CompilerControls from '../../components/Slider/CompilerControls/CompilerControls';
 
 configure({adapter: new Adapter()});
@@ -16,7 +14,7 @@ describe('<SliderCompiler />', () => {
 	});
 
 	it('devrait rendre <CompilerControls /> dès qu\'il reçoit des ingrédients', () => {
-		wrapper.setProps({ings: {cheese: 0}});
-		expect(wrapper.find(CompilerControls)).toHaveLength(1);
+	wrapper.setProps({ings: {fromage: 0}});
+	expect(wrapper.find(CompilerControls)).toHaveLength(1);
 	});
 });

@@ -1,5 +1,4 @@
 import React from 'react';
-
 import classes from './Order.css';
 
 const order = (props) => {
@@ -11,7 +10,7 @@ const order = (props) => {
 				name: ingredientName, 
 				amount: props.ingredients[ingredientName]
 			}
-		)
+		);
 	}
 
 	const ingredientOutput = ingredients.map(ig => {
@@ -33,6 +32,6 @@ const order = (props) => {
 			<p>Prix: CA$ {Number.parseFloat(props.price).toFixed(2)}</p>
 		</div>
 	);
-};
+}
 
 export default order;

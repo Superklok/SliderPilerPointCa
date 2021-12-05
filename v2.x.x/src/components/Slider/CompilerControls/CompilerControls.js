@@ -1,13 +1,12 @@
 import React from 'react';
-
 import classes from './CompilerControls.css';
 import CompilerControl from './CompilerControl/CompilerControl';
 
 const controls = [
-	{ label: 'Laitue', type: 'laitue' },
-	{ label: 'Bacon', type: 'bacon' },
-	{ label: 'Fromage', type: 'fromage' },
-	{ label: 'Viande', type: 'viande' },
+	{label: 'Laitue', type: 'laitue'},
+	{label: 'Bacon', type: 'bacon'},
+	{label: 'Fromage', type: 'fromage'},
+	{label: 'Viande', type: 'viande'},
 ];
 
 const compilerControls = ( props ) => (

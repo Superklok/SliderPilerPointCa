@@ -1,8 +1,7 @@
 import React from 'react';
-
 import classes from './CompilerControl.css';
 
-const compilerControl = ( props ) => (
+const compilerControl = (props) => (
 	<div className={classes.CompilerControl}>
 		<div className={classes.Label}>{props.label}</div>
 		<button 

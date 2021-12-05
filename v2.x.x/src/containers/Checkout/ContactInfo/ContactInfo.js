@@ -1,6 +1,5 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-
+import React, {Component} from 'react';
+import {connect} from 'react-redux';
 import Button from '../../../components/UI/Button/Button';
 import Spinner from '../../../components/UI/Spinner/Spinner';
 import classes from './ContactInfo.css';
@@ -8,7 +7,7 @@ import axios from '../../../axios-orders';
 import Input from '../../../components/UI/Input/Input';
 import withErrorHandler from '../../../hoc/withErrorHandler/withErrorHandler';
 import * as actions from '../../../store/actions/index';
-import { updateObject, checkValidity } from '../../../shared/utility';
+import {updateObject, checkValidity} from '../../../shared/utility';
 
 class ContactInfo extends Component {
 	state = {
@@ -101,16 +100,20 @@ class ContactInfo extends Component {
 
 	orderHandler = (event) => {
 		event.preventDefault();
+
 		const formData = {};
+
 		for (let formElementIdentifier in this.state.orderForm) {
 			formData[formElementIdentifier] = this.state.orderForm[formElementIdentifier].value;
 		}
+
 		const order = {
 			ingredients: this.props.ings,
 			price: this.props.price,
 			orderData: formData,
 			userId: this.props.userId
 		}
+
 		this.props.onOrderSlider(order, this.props.token);
 	}
 
@@ -123,22 +126,25 @@ class ContactInfo extends Component {
 		const updatedOrderForm = updateObject(this.state.orderForm, {
 			[inputIdentifier]: updatedFormElement
 		});
-		
 		let formIsValid = true;
+
 		for (let inputIdentifier in updatedOrderForm) {
 			formIsValid = updatedOrderForm[inputIdentifier].valid && formIsValid;
 		}
+
 		this.setState({orderForm: updatedOrderForm, formIsValid: formIsValid});
 	}
 
 	render () {
 		const formElementsArray = [];
+
 		for (let key in this.state.orderForm) {
 			formElementsArray.push({
 				id: key,
 				config: this.state.orderForm[key]
 			});
 		}
+
 		let form = (
 			<form onSubmit={this.orderHandler}>
 				{formElementsArray.map(formElement => (
@@ -152,13 +158,15 @@ class ContactInfo extends Component {
 						touched={formElement.config.touched}
 						changed={(event) => this.inputChangedHandler(event, formElement.id)} />
 				))}
-				<Button btnType="Success" disabled={!this.state.formIsValid}>Commandez</Button>
+				<Button btnType='Success' disabled={!this.state.formIsValid}>Commandez</Button>
 			</form>
 		);
+
 		if (this.props.loading) {
 			form = <Spinner />;
 		}
-		return(
+
+		return (
 			<div className={classes.ContactInfo}>
 				<h4>Veuillez entrer vos informations de contact</h4>
 				{form}
@@ -174,13 +182,13 @@ const mapStateToProps = state => {
 		loading: state.order.loading,
 		token: state.auth.token,
 		userId: state.auth.userId
-	}
-};
+	};
+}
 
 const mapDispatchToProps = dispatch => {
 	return {
 		onOrderSlider: (orderData, token) => dispatch(actions.purchaseSlider(orderData, token))
 	};
-};
+}
 
 export default connect(mapStateToProps, mapDispatchToProps)(withErrorHandler(ContactInfo, axios));

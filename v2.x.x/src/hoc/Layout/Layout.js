@@ -1,6 +1,5 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-
+import React, {Component} from 'react';
+import {connect} from 'react-redux';
 import Aux from '../Auxiliary/Auxiliary';
 import classes from './Layout.css';
 import Toolbar from '../../components/Navigation/Toolbar/Toolbar';
@@ -37,15 +36,15 @@ class Layout extends Component {
 							{this.props.children}
 						</div>
 						<footer className={classes.Footer}>
-							<a className={classes.TrevMorin} href="http://trevmorin.ca/">TM</a>
-							<a className={classes.French} href="http://sliderpiler.com/">English</a>
+							<a className={classes.TrevMorin} href='http://trevmorin.ca/'>TM</a>
+							<a className={classes.French} href='http://sliderpiler.com/'>English</a>
 							<br/>
 							<span className={classes.Copyright}>&copy;<small> 2021 Superklok Labs</small></span>
 						</footer>
 					</div>
 				</main>
 			</Aux>
-		)
+		);
 	}
 }
 
@@ -53,6 +52,6 @@ const mapStateToProps = state => {
 	return {
 		isAuthenticated: state.auth.token !== null
 	};
-};
+}
 
 export default connect(mapStateToProps)(Layout);

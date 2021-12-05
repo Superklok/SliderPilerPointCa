@@ -1,14 +1,13 @@
-import { takeEvery, all, takeLatest } from 'redux-saga/effects';
-
+import {takeEvery, all, takeLatest} from 'redux-saga/effects';
 import * as actionTypes from '../actions/actionTypes';
-import { 
+import {
 	logoutSaga, 
 	checkAuthTimeoutSaga, 
 	authUserSaga, 
 	authCheckStateSaga 
 } from './auth';
-import { initIngredientsSaga } from './sliderCompiler';
-import { fetchOrdersSaga, purchaseSliderSaga } from './order';
+import {initIngredientsSaga} from './sliderCompiler';
+import {fetchOrdersSaga, purchaseSliderSaga} from './order';
 
 export function* watchAuth() {
 	yield all([

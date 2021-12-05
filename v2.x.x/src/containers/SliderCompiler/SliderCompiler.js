@@ -1,6 +1,5 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-
+import React, {Component} from 'react';
+import {connect} from 'react-redux';
 import Aux from '../../hoc/Auxiliary/Auxiliary';
 import Slider from '../../components/Slider/Slider';
 import CompilerControls from '../../components/Slider/CompilerControls/CompilerControls';
@@ -33,7 +32,7 @@ export class SliderCompiler extends Component {
 
 	purchaseHandler = () => {
 		if (this.props.isAuthenticated) {
-			this.setState({purchasing: true});
+				this.setState({purchasing: true});
 		} else {
 			this.props.onSetAuthRedirectPath('/checkout');
 			this.props.history.push('/auth');
@@ -53,12 +52,14 @@ export class SliderCompiler extends Component {
 		const disabledInfo = {
 			...this.props.ings
 		};
+
 		for (let key in disabledInfo) {
 			disabledInfo[key] = disabledInfo[key] <= 0
 		}
+
 		let orderSummary = null;
 		let slider = this.props.error ? <p>Impossible de charger les ingr&eacute;dients!</p> : <Spinner />;
-		
+
 		if (this.props.ings) {
 			slider = (
 				<Aux>
@@ -73,18 +74,19 @@ export class SliderCompiler extends Component {
 						price={this.props.price} />
 				</Aux>
 			);
-			orderSummary = <OrderSummary 
+			orderSummary = <OrderSummary
 				ingredients={this.props.ings}
 				price={this.props.price}
 				purchaseCancelled={this.purchaseCancelHandler}
 				purchaseContinued={this.purchaseContinueHandler} />;
 		}
+		
 		return (
 			<Aux>
 				<Modal show={this.state.purchasing} modalClosed={this.purchaseCancelHandler}>
 					{orderSummary}
 				</Modal>
-				{slider}
+					{slider}
 			</Aux>
 		);
 	}
@@ -106,7 +108,7 @@ const mapDispatchToProps = dispatch => {
 		onInitIngredients: () => dispatch(actions.initIngredients()),
 		onInitPurchase: () => dispatch(actions.purchaseInit()),
 		onSetAuthRedirectPath: (path) => dispatch(actions.setAuthRedirectPath(path))
-	}
+	};
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(withErrorHandler(SliderCompiler, axios));

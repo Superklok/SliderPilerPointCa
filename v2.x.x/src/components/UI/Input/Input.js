@@ -1,5 +1,4 @@
 import React from 'react';
-
 import classes from './Input.css';
 
 const input = (props) => {
@@ -53,6 +52,6 @@ const input = (props) => {
 			{inputElement}
 		</div>
 	);
-};
+}
 
 export default input;

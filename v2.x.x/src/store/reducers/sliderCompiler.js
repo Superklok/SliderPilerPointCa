@@ -1,12 +1,12 @@
 import * as actionTypes from '../actions/actionTypes';
-import { updateObject } from '../../shared/utility';
+import {updateObject} from '../../shared/utility';
 
 const initialState = {
 	ingredients: null,
 	totalPrice: 1,
 	error: false,
 	compiling: false
-};
+}
 
 const INGREDIENT_PRICES = {
 	laitue: 0.75,
@@ -23,8 +23,9 @@ const addIngredient = (state, action) => {
 		totalPrice: state.totalPrice + INGREDIENT_PRICES[action.ingredientName],
 		compiling: true
 	}
+
 	return updateObject(state, updatedState);
-};
+}
 
 const removeIngredient = (state, action) => {
 	const resultingIngredient = { [action.ingredientName]: state.ingredients[action.ingredientName] - 1 }
@@ -34,8 +35,9 @@ const removeIngredient = (state, action) => {
 		totalPrice: state.totalPrice - INGREDIENT_PRICES[action.ingredientName],
 		compiling: true
 	}
+	
 	return updateObject(state, resultingState);
-};
+}
 
 const setIngredients = (state, action) => {
 	return updateObject(state, {
@@ -49,11 +51,11 @@ const setIngredients = (state, action) => {
 		error: false,
 		compiling: false
 	});
-};
+}
 
 const fetchIngredientsFailed = (state, action) => {
 	return updateObject(state, { error: true} );
-};
+}
 
 const reducer = (state = initialState, action) => {
 	switch (action.type) {
@@ -63,6 +65,6 @@ const reducer = (state = initialState, action) => {
 		case actionTypes.FETCH_INGREDIENTS_FAILED: return fetchIngredientsFailed(state, action);
 		default: return state;
 	}
-};
+}
 
 export default reducer;

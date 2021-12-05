@@ -1,6 +1,5 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-
+import React, {Component} from 'react';
+import {connect} from 'react-redux';
 import Order from '../../components/Order/Order';
 import axios from '../../axios-orders';
 import withErrorHandler from '../../hoc/withErrorHandler/withErrorHandler';
@@ -14,6 +13,7 @@ class Orders extends Component {
 
 	render () {
 		let orders = <Spinner />;
+
 		if (!this.props.loading) {
 			orders = this.props.orders.map(order => (
 				<Order 
@@ -21,10 +21,11 @@ class Orders extends Component {
 					ingredients={order.ingredients}
 					price={order.price} />
 			))
-		};
+		}
+		
 		return (
 			<div>
-				{ orders }
+				{orders}
 			</div>
 		);
 	}
@@ -37,12 +38,12 @@ const mapStateToProps = state => {
 		token: state.auth.token,
 		userId: state.auth.userId
 	};
-};
+}
 
 const mapDispatchToProps = dispatch => {
 	return {
 		onFetchOrders: (token, userId) => dispatch(actions.fetchOrders(token, userId))
 	};
-};
+}
 
 export default connect(mapStateToProps, mapDispatchToProps)(withErrorHandler(Orders, axios));

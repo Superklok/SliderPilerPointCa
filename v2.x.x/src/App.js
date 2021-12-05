@@ -1,7 +1,6 @@
-import React, { Component } from 'react';
-import { Route, Switch, withRouter, Redirect } from 'react-router-dom';
-import { connect } from 'react-redux';
-
+import React, {Component} from 'react';
+import {Route, Switch, withRouter, Redirect} from 'react-router-dom';
+import {connect} from 'react-redux';
 import Layout from './hoc/Layout/Layout';
 import SliderCompiler from './containers/SliderCompiler/SliderCompiler';
 import Checkout from './containers/Checkout/Checkout';
@@ -51,12 +50,12 @@ const mapStateToProps = state => {
 	return {
 		isAuthenticated: state.auth.token !== null
 	};
-};
+}
 
 const mapDispatchToProps = dispatch => {
 	return {
 		onTryAutoSignup: () => dispatch(actions.authCheckState())
 	};
-};
+}
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(App));
