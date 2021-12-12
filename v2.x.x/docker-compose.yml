@@ -2,13 +2,13 @@ version: "3.8"
 
 services:
   app:
-    image: superklok/sliderpilerpointca:1.5.8
+    image: superklok/sliderpilerpointca:2.3.1
     build: 
       context: .
       target: prod
     ports:
       - "80:80"
-    command: npm start
+    command: serve -s build -p 80
     volumes:
       - .:/app
     environment:
