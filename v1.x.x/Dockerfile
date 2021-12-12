@@ -1,10 +1,10 @@
-FROM node:17.0.1 as base
+FROM node:17.2.0 as base
 LABEL org.opencontainers.image.vendor="Superklok Labs"
 LABEL org.opencontainers.image.authors="trev@superklok.ca"
 LABEL org.opencontainers.image.title="SliderPilerPointCa"
 LABEL org.opencontainers.image.description="Slider Piler (Français)"
-LABEL org.opencontainers.image.version="1.5.4"
-LABEL org.opencontainers.image.created="2021-11-28"
+LABEL org.opencontainers.image.version="1.5.6"
+LABEL org.opencontainers.image.created="2021-12-12"
 LABEL org.opencontainers.image.url="https://hub.docker.com/r/superklok/sliderpilerpointca"
 LABEL org.opencontainers.image.source="https://github.com/Superklok/SliderPilerPointCa"
 LABEL org.opencontainers.image.licenses="ISC"
